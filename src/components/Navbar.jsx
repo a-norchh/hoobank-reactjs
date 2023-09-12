@@ -29,7 +29,7 @@ const Navbar = () => {
         <div
           className={`${
             toggle ? "flex" : "hidden"
-          } p-6 bg-black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}
+          } p-6 bg-black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar z-[10]`}
         >
           <ul className="list-none flex flex-col justify-end items-center flex-1 gap-[18px]">
             {navLinks.map((nav) => (
@@ -37,7 +37,9 @@ const Navbar = () => {
                 key={nav.id}
                 className={`font-poppins font-normal cursou-pointer text-[16px] text-white`}
               >
-                <a href={`#${nav.id}`}>{nav.title}</a>
+                <a href={`#${nav.id}`} onClick={() => setToggle(false)}>
+                  {nav.title}
+                </a>
               </li>
             ))}
           </ul>

@@ -33,6 +33,10 @@ const App = () => (
         <Testimonials />
         <Clients />
         <CTA />
+      </div>
+    </div>
+    <div className={` ${styles.flexStart} bg-[#0B0A0C]/60`}>
+      <div className={`${styles.boxWidth}`}>
         <Footer />
       </div>
     </div>
